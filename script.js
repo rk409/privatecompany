@@ -27,7 +27,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 let slider = document.getElementById("slider");
-let cards = slider.querySelectorAll(".card");
+let cards = slider.querySelectorAll(".service-card");
 let index = 0;
 let slideInterval;
 
@@ -44,7 +44,7 @@ function slide() {
 
 // Start auto sliding
 function startSlider() {
-  slideInterval = setInterval(slide, 2000);
+  slideInterval = setInterval(slide, 1000);
 }
 
 // Stop auto sliding
@@ -60,3 +60,7 @@ slider.addEventListener("mouseover", stopSlider);
 
 // Resume on mouse leave
 slider.addEventListener("mouseleave", startSlider);
+
+function redirect(url) {
+  window.location.href = `teampage.html`;
+}
