@@ -29,7 +29,9 @@ document.addEventListener("keydown", function (e) {
 let slider = document.getElementById("slider");
 let cards = slider.querySelectorAll(".card");
 let index = 0;
+let slideInterval;
 
+// Slide function
 function slide() {
   index++;
   if (index >= cards.length) {
@@ -40,4 +42,21 @@ function slide() {
   }px)`;
 }
 
-setInterval(slide, 2000);
+// Start auto sliding
+function startSlider() {
+  slideInterval = setInterval(slide, 2000);
+}
+
+// Stop auto sliding
+function stopSlider() {
+  clearInterval(slideInterval);
+}
+
+// Start slider initially
+startSlider();
+
+// Pause on hover
+slider.addEventListener("mouseover", stopSlider);
+
+// Resume on mouse leave
+slider.addEventListener("mouseleave", startSlider);

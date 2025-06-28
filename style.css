@@ -290,7 +290,7 @@ body {
   transition: transform 0.6s ease-in-out;
   width: max-content;
 }
-.card {
+.service-card {
   position: relative;
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -302,12 +302,15 @@ body {
   text-align: left;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-.card h3 {
+.service-card:hover {
+  scale: 1.1;
+}
+.service-card h3 {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.card p {
+.service-card p {
   font-size: 14px;
 }
 /* contact*/
@@ -378,10 +381,10 @@ input[type="email"] {
   margin-bottom: 10px;
   transform: skew(-25deg);
 }
-.top-brands-bar-1 .card-ott h3 {
+.top-brands-bar-1 .service-card-ott h3 {
   width: 900px;
 }
-.top-brands-bar-1 .card-img-ott img {
+.top-brands-bar-1 .service-card-img-ott img {
   height: 50px;
   border-radius: 50%;
 }
@@ -392,7 +395,7 @@ input[type="email"] {
   padding: 10px 10px;
   align-items: center;
 }
-.top-brands-bar-2 .card-shreeji h3 {
+.top-brands-bar-2 .service-card-shreeji h3 {
   width: 900px;
 }
 /* Team Member Page */
@@ -458,4 +461,48 @@ input[type="email"] {
   left: 50%;
   transform: translate(-50%, 450%);
   /* I want to make it white */
+}
+.btn {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Button of Contact Page */
+.submit-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.7vw 2vw;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  outline: none;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(5px) rotate(10deg);
+  }
+  50% {
+    transform: translateX(0) rotate(-10deg);
+  }
+  75% {
+    transform: translateX(5px) rotate(10deg);
+  }
 }
