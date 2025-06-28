@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(90deg, #000000, #4e0000);
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #000000, #4e0000);
+  color: white;
+  position: relative;
+  padding: 1rem 0;
+  border-bottom: 1px solid #fff;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 64px;
+}
+
+/* Logo Section */
+
+.logo-icon {
+  width: 6rem;
+  height: 6rem;
+  background-size: cover;
+}
+
+/* Desktop Navigation */
+.nav-menu {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* CTA Button */
+.cta-button {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background-color: #000000;
+  border-left: 1px solid #374151;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-menu-header .logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-menu-header .logo-text {
+  font-size: 1rem;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #f472b6;
+}
+
+.mobile-cta {
+  margin-top: 1.5rem;
+}
+
+.mobile-cta .cta-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+  }
+
+  .cta-button {
+    display: block;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+.cta-button i {
+  color: #fff;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+/* Underline Animation */
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+.nav-item:hover::after {
+  width: 100%;
+}
+/* Animation Ends */
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section .section-1 h1 {
+  max-width: 350px;
+  font-size: 2.5rem;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.hero-section .section-2 img {
+  height: 500px;
+  width: 600px;
+}
+
+/* Services Code start here */
+.services {
+  padding: 2rem;
+  text-align: center;
+}
+.services h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 400;
+}
+.services h2 {
+  font-size: 1.8rem;
+  margin: 30px;
+  font-weight: 500;
+}
+.proposal-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 70px;
+}
+.slider-bottom {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: max-content;
+}
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 50px 30px;
+  margin: 0 10px;
+  min-width: 300px;
+  max-width: 300px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 14px;
+}
+/* contact*/
+.get-in {
+  position: relative;
+}
+.contact-us {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.arrow-icon-svg {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  filter: invert(1);
+  top: 10%;
+  right: 20%;
+  rotate: 180deg;
+}
+input {
+  border-radius: 5px;
+}
+input[type="text"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+input[type="email"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 5px;
+}
+.contact-left textarea {
+}
+/* top-brands-name */
+
+.trusted-brands-name .brand-name {
+  text-align: center;
+}
+.top-brands-bar-1 {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  transform: skew(-25deg);
+}
+.top-brands-bar-1 .card-ott h3 {
+  width: 900px;
+}
+.top-brands-bar-1 .card-img-ott img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.top-brands-bar-2 {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 10px 10px;
+  align-items: center;
+}
+.top-brands-bar-2 .card-shreeji h3 {
+  width: 900px;
+}
+/* Team Member Page */
+.team-members {
+  background: linear-gradient(90deg, #000000, #4e0000);
+  padding: 50px 0;
+  margin: 4rem 0;
+}
+.team-members h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.team-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+}
+.team-member {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  height: 450px;
+}
+.team-member img {
+  width: 90%;
+  border-radius: 50%;
+}
+.team-member h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.team-member p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+.team-member .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+.team-member .social-icons i {
+  font-size: 2rem;
+}
+.feel_svg {
+  position: absolute;
+  /* top: 0; */
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  filter: invert(1);
+}
+.team-members svg {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 450%);
+  /* I want to make it white */
+}
