@@ -298,7 +298,7 @@ body {
   margin: 0 10px;
   min-width: 300px;
   max-width: 300px;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: left;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   transition: 0.1s ease-in;
@@ -606,7 +606,7 @@ input[type="email"] {
   background-color: rgba(255, 255, 255, 0.1);
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -621,7 +621,7 @@ input[type="email"] {
   background-color: rgba(255, 255, 255, 0.1);
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -635,7 +635,7 @@ input[type="email"] {
   background-color: rgba(255, 255, 255, 0.1);
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -658,4 +658,17 @@ input[type="email"] {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.1);
   text-decoration: none;
+}
+.head-container-circle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 20px;
+}
+.head-container-circle .circle-container-right-img img {
+  height: 400px;
+  transform: scalex(-1);
+}
+.circle-work-container img {
+  height: 50px;
 }
