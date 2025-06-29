@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>IT Services India - Navbar</title>
+    <title>IT Services India - Home</title>
     <link rel="shortcut icon" href="image/faviconlogo-ihs.png" type="image/logo.">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,14 +28,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            INDUSTRIES
-
+                        <a href="#work" class="nav-link">
+                            Work With Us
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="#technology" class="nav-link">
                             TECHNOLOGIES
 
                         </a>
@@ -139,7 +138,7 @@
         </div>
     </div>
     <!-- Our Services -->
-    <div class="services">
+    <div class="services" id="services">
         <div class="services-top">
             <h1>Our Services</h1>
             <svg class="w-full " width="300px" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,7 +249,7 @@
     </div>
     <!-- Our Services End Here -->
 
-    <div class="section-work-container-main">
+    <div class="section-work-container-main" id="#work">
         <h1>why work with ithubservice ?</h1>
         <svg class="w-full " width="300px" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -337,7 +336,7 @@
 
             </div>
         </div>
-        <div class="team-btn">
+        <!-- <div class="team-btn">
             <button type="submit" class="explore-button" onclick="redirect()">
                 Show All
                 <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
@@ -346,7 +345,7 @@
                     </path>
                 </svg>
             </button>
-        </div>
+        </div> -->
         <!-- why work with us  -->
 
         <!-- Contact Page -->
@@ -354,35 +353,208 @@
             <img class="arrow-icon-svg arrow-icon-svg-1" src="image/Curved_arrow_tilled.png">
             <img class="arrow-icon-svg arrow-icon-svg-2" src="image/Curved_arrow_tilled.png">
             <div class="contact-us" id="contact">
-                <form class="contact-left">
+                <form class="contact-left" action="https://formsubmit.co/solo95bgmi@gmail.com" method="POST">
                     <div class="contact-left-title">
                         <h2>Get in Touch</h2>
                         <hr>
                     </div>
-                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-                    <input type="text" name="Company name" placeholder="Your Company Name" class="contact-inputs"
+                    <input type="text" name="name" placeholder="Enter Name" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="Enter Email" class="contact-inputs" required>
+                    <input type="text" name="name" placeholder="Enter Phone" class="contact-inputs" required>
+                    <input type="text" name="Company name" placeholder="Enter Your Message" class="contact-inputs"
                         required>
-                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-                    <input type="text" name="name" placeholder="Your Phone" class="contact-inputs" required>
                     <button class="submit-button">
                         Submit <span class="arrow-contact"><i class="fa-solid fa-arrow-right"></i></span>
                     </button>
             </div>
+            <div class="techno-main">
+                <h1 class="techno-h1">Technologies we work with</h1>
 
-            <div class="technology-we-work-with">
-                <h1>Technologies we work with</h1>
-                <div class="tech-button">
-                    <a href="">MOBILE</a>
-                    <a href="">FRONT END</a>
-                    <a href="">BACK END</a>
-                    <a href="">FRAMEWORKS</a>
-                    <a href="">CMS</a>
-                    <a href="">Mobile</a>
-                    <a href="">Mobile</a>
+                <div class="tabs">
+                    <div class="tab" data-tab="mobile">App Dev</div>
+                    <div class="tab active" data-tab="frontend">Front End</div>
+                    <div class="tab" data-tab="backend">Backend</div>
+                    <div class="tab" data-tab="frameworks">Frameworks</div>
+                    <div class="tab" data-tab="database">Database</div>
+                    <div class="tab" data-tab="devops">DevOps</div>
+                    <div class="tab" data-tab="ecommerce">Ecommerce</div>
+                </div>
+
+                <!-- Mobile Content -->
+                <div class="content" id="mobile">
+                    <div class="tech"><img src="component/android.png" />
+                        <div>Android</div>
+                    </div>
+                    <div class="tech"><img class="apple" src="component/apple.png" />
+                        <div>iOS</div>
+                    </div>
+                    <div class="tech"><img src="component/swift.png" />
+                        <div>Swift</div>
+                    </div>
+                    <div class="tech"><img src="component/Flutter-removebg-preview.png" />
+                        <div>Flutter</div>
+                    </div>
+                    <div class="tech"><img src="component/React-removebg-preview.png" />
+                        <div>React</div>
+                    </div>
+                    <div class="tech"><img src="component/Kotlin-removebg-preview.png" />
+                        <div>Kotlin</div>
+                    </div>
+                </div>
+
+                <!-- Front End Content -->
+                <div class="content active" id="frontend">
+                    <div class="tech"><img src="component/html-5--v1.png" />
+                        <div>HTML5</div>
+                    </div>
+                    <div class="tech"><img src="component/css3.png" />
+                        <div>CSS3</div>
+                    </div>
+                    <div class="tech"><img src="component/javascript--v1.png" />
+                        <div>JavaScript</div>
+                    </div>
+                    <div class="tech"><img src="component/React-removebg-preview.png" />
+                        <div>React</div>
+                    </div>
+                    <div class="tech"><img src="component/bootstrap-removebg-preview.png" />
+                        <div>BootStrap</div>
+                    </div>
+                    <div class="tech"><img src="component/tailwind-css.png" />
+                        <div>Tailwind</div>
+                    </div>
+                    <div class="tech"><img src="component/angular-removebg-preview.png" />
+                        <div>Angular</div>
+                    </div>
+                    <div class="tech"><img src="component/Vue.js-removebg-preview.png" />
+                        <div>Vue</div>
+                    </div>
+                </div>
+
+                <!-- Backend Content -->
+                <div class="content" id="backend">
+                    <div class="tech"><img src="component/nodejs.png" />
+                        <div>Node.js</div>
+                    </div>
+                    <div class="tech"><img src="component/python.png" />
+                        <div>Python</div>
+                    </div>
+                    <div class="tech"><img src="component/php-removebg-preview.png" />
+                        <div>PHP</div>
+                    </div>
+                    <div class="tech"><img src="component/next-js-removebg-preview.png" />
+                        <div>Next.Js</div>
+                    </div>
+                </div>
+
+                <!-- Framework -->
+                <div class="content" id="frameworks">
+                    <div class="tech"><img src="component/figma-removebg-preview.png" />
+                        <div>Figma</div>
+                    </div>
+                    <div class="tech"><img src="component/wordpress.png" />
+                        <div>WordPress</div>
+                    </div>
+                    <div class="tech"><img src="component/Django.png" />
+                        <div>Django</div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="content" id="database">
+                    <div class="tech"><img src="component/mysql.png" />
+                        <div>MySql</div>
+                    </div>
+                    <div class="tech"><img src="component/postsql-removebg-preview.png" />
+                        <div>PostgreSql</div>
+                    </div>
+                    <div class="tech"><img src="component/mongodb-removebg-preview.png" />
+                        <div>MongoDB</div>
+                    </div>
+                    <div class="tech"><img src="component/Django.png" />
+                        <div>Firebase</div>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="content" id="devops">
+                    <div class="tech"><img src="component/docker.png" />
+                        <div>Docker</div>
+                    </div>
+                    <div class="tech"><img src="component/kubernet-removebg-preview.png" />
+                        <div>Kubernetes</div>
+                    </div>
+                    <div class="tech"><img src="component/NET-core.svg" />
+                        <div>.Net</div>
+                    </div>
+                    <div class="tech"><img src="component/AWS.png" />
+                        <div>AWS</div>
+                    </div>
+                    <div class="tech"><img src="component/azure.png" />
+                        <div>Azure DevOps</div>
+                    </div>
+                </div>
+
+                <!-- Ecommerce -->
+                <div class="content" id="ecommerce">
+                    <div class="tech"><img src="component/shopify.png" />
+                        <div>Shopify</div>
+                    </div>
+                    <div class="tech"><img src="component/Odoo-removebg-preview.png" />
+                        <div>Odoo</div>
+                    </div>
+                    <div class="tech"><img src="component/woo-commerce-removebg-preview.png" />
+                        <div>Woo Commerce</div>
+                    </div>
                 </div>
             </div>
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span><img src="image/faviconlogo-ihs.png" alt=""></span>ithubservice
+                    </div>
+                    <p class="footer-desc">
+                        We customize and design our tech support services to fit your business just right—your goals,
+                        your structure, your way.
+                    </p>
+                    <div class="footer-icons">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-title">More Information</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a> </li>
+                        <li><a href="#team.html">team member page</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#contact">contact us</a></li>
+                        <li><a href="coming.html">Privacy Policy</a></li>
+                        <li><a href="coming.html">Terms & Conditions</a></li>
+                        <li><a href="coming.html">cookies and policy</a></li>
+                    </ul>
+                </div>
 
-            <!-- Contact Page Code End Here -->
+
+                <div class="footer-column">
+                    <div class="footer-title">Contact Info</div>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            1 800 234 5678
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="#">rahul0306kr@gmail.com</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </footer>
+
+
             <script src="script.js"></script>
 
 </body>
