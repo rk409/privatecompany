@@ -43,27 +43,27 @@ function slide() {
 }
 
 // Start auto sliding
-function startSlider() {
-  slideInterval = setInterval(slide, 1000);
-}
+// function startSlider() {
+//   slideInterval = setInterval(slide, 1000);
+// }
 
 // Stop auto sliding
-function stopSlider() {
-  clearInterval(slideInterval);
-}
+// function stopSlider() {
+//   clearInterval(slideInterval);
+// }
 
 // Start slider initially
-startSlider();
+// startSlider();
 
 // Pause on hover
-slider.addEventListener("mouseover", stopSlider);
+// slider.addEventListener("mouseover", stopSlider);
 
 // Resume on mouse leave
-slider.addEventListener("mouseleave", startSlider);
+// slider.addEventListener("mouseleave", startSlider);
 
-function redirect(url) {
-  window.location.href = `teampage.html`;
-}
+// function redirect(url) {
+//   window.location.href = `teampage.html`;
+// }
 
 function technoWork() {
   const tabs = document.querySelectorAll(".tab");
@@ -85,3 +85,87 @@ function technoWork() {
   });
 }
 technoWork();
+const track = document.getElementById("slide-track");
+const dots = document.querySelectorAll(".dot");
+let idx = 0;
+const totalSlides = dots.length;
+
+function updateSlidePosition() {
+  track.style.transition = "transform 0.7s ease";
+  track.style.transform = `translateX(-${idx * 100}%)`;
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[idx].classList.add("active");
+}
+
+function moveSlide(step) {
+  idx = (idx + step + totalSlides) % totalSlides;
+  updateSlidePosition();
+}
+
+function gotoSlide(i) {
+  idx = i;
+  updateSlidePosition();
+}
+
+let autoSlide = setInterval(() => moveSlide(1), 5000);
+
+// Pause on hover
+const container = document.querySelector(".carousel-container");
+container.addEventListener("mouseenter", () => clearInterval(autoSlide));
+container.addEventListener(
+  "mouseleave",
+  () => (autoSlide = setInterval(() => moveSlide(1), 5000))
+);
+
+// chatbot start here
+const faqs = {
+  coursesz:
+    "We offer Web Development, Graphic Design, Tally, MS Office, and more. Visit the Courses page for full details.",
+  timings:
+    "Our classes run from 7 AM to 8 PM in various batches. You can choose a convenient slot.",
+  fees: "Fees vary by course. Contact us for details or visit the 'Courses' section.",
+  admission:
+    "You can enroll online or visit our office with 2 passport-sized photos and a valid ID.",
+  location: "We are located at [Your Address Here].",
+  name: "My name is Sachin. What can i help you?",
+  doing: "I can help you to explore courses",
+};
+
+function toggleChat() {
+  const widget = document.getElementById("chat-widget");
+  widget.style.display = widget.style.display === "flex" ? "none" : "flex";
+}
+
+function sendMessage() {
+  const input = document.getElementById("chat-input");
+  const log = document.getElementById("chat-log");
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  log.innerHTML += `<div><strong>You:</strong> ${msg}</div>`;
+  let response =
+    "I'm not sure about that. Please contact our team for more info.";
+
+  for (const keyword in faqs) {
+    if (msg.toLowerCase().includes(keyword)) {
+      response = faqs[keyword];
+      break;
+    }
+  }
+
+  setTimeout(() => {
+    log.innerHTML += `<div><strong>Sachin:</strong> ${response}</div>`;
+    log.scrollTop = log.scrollHeight;
+  }, 500);
+
+  input.value = "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("chat-input")
+    .addEventListener("keydown", function (event) {
+      if (event.key === "Enter") sendMessage();
+    });
+});
+// end here
