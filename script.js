@@ -42,29 +42,6 @@ function slide() {
   }px)`;
 }
 
-// Start auto sliding
-// function startSlider() {
-//   slideInterval = setInterval(slide, 1000);
-// }
-
-// Stop auto sliding
-// function stopSlider() {
-//   clearInterval(slideInterval);
-// }
-
-// Start slider initially
-// startSlider();
-
-// Pause on hover
-// slider.addEventListener("mouseover", stopSlider);
-
-// Resume on mouse leave
-// slider.addEventListener("mouseleave", startSlider);
-
-// function redirect(url) {
-//   window.location.href = `teampage.html`;
-// }
-
 function technoWork() {
   const tabs = document.querySelectorAll(".tab");
   const contents = document.querySelectorAll(".content");
@@ -169,3 +146,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 // end here
+
+function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("successMsg").style.display = "none";
+      document.getElementById("contactForm").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // Close popup if clicked outside the box
+    window.addEventListener("click", function(e) {
+      const popup = document.getElementById("popup");
+      if (e.target === popup) {
+        closePopup();
+      }
+    });
+
+    // Handle form submission
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // prevent page reload
+
+      // Hide the form and show success message
+      this.style.display = "none";
+      document.getElementById("successMsg").style.display = "block";
+
+      // Auto-close popup after 3 seconds
+      setTimeout(() => {
+        closePopup();
+      }, 3000);
+    });
+openPopup()

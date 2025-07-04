@@ -8,7 +8,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>IT Services India - Home</title>
-    <link rel="shortcut icon" href="image/faviconlogo-ihs.png" type="image/logo.">
+    <link rel="shortcut icon" href="image/ihs.svg" type="image/logo.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="chatbot.css">
@@ -36,13 +36,18 @@
     <nav class="navbar">
         <div class="navbar-content">
             <!-- Logo -->
-            <div class="main-logo">
-                <img src="image/faviconlogo-ihs.png" alt="IHS Logo" class="logo-icon">
-            </div>
+            <a href="#" class="main-logo">
+                <img src="image/ihs.svg" alt="IHS Logo" class="logo-icon">
+            </a>
 
             <!-- Desktop Navigation -->
             <div class="main-navigation">
                 <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            HOME
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a href="#services" class="nav-link">
                             SERVICES
@@ -68,7 +73,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="team.html" class="nav-link">
                             TEAM
 
                         </a>
@@ -84,14 +89,14 @@
 
             <!-- CTA Button -->
             <div class="main-button">
-                <a class="cta-button" href="#contact">Enquiry now<i
+                <a class="cta-button" href="#contact">Enquiry Now<i
                         class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <svg class="hamburger" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
@@ -102,7 +107,6 @@
     <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
-            <div class="logo-icon"></div>
             <span class="logo-text">IT SERVICES INDIA</span>
         </div>
         <ul class="mobile-nav-list">
@@ -117,7 +121,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="mobile-nav-link">
+                <a href="#work" class="mobile-nav-link">
                     WORK WITH US
                     <svg class="dropdown-icon" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -127,7 +131,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="mobile-nav-link">
+                <a href="#technology" class="mobile-nav-link">
                     TECHNOLOGIES
                     <svg class="dropdown-icon" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -137,7 +141,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="mobile-nav-link">
+                <a href="pricing.html" class="mobile-nav-link">
                     PRICING
                     <svg class="dropdown-icon" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -147,7 +151,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="mobile-nav-link">
+                <a href="team.html" class="mobile-nav-link">
                     TEAM
                     <svg class="dropdown-icon" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -168,29 +172,25 @@
             </li>
         </ul>
         <div class="mobile-cta">
-            <div class="cta-button">LET'S TALKS<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            <a href="#contact" class="cta-button">Enquiry Now<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
     </div>
     <!-- hero-section -->
     <div class="carousel-container">
         <div class="carousel-slide" id="slide-track">
             <div class="carousel-item">
-                <img src="image/merakist-RxOrX1iW15A-unsplash.jpg" alt="Slide 1">
                 <div class="caption">
                     <h2>Welcome to Our Website</h2>
                     <p>Delivering modern solutions with creative vibes</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="image/joshua-aragon-BMnhuwFYr7w-unsplash.jpg" alt="Slide 2">
                 <div class="caption">
                     <h2>Fast, Simple, Elegant</h2>
                     <p>UI/UX and Web Design services for your brand</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="image/it-specialist-composition-with-flat-view-hipster-programmers-workplace-icons-cycle-representing-work-pipeline-vector-illustration_1284-74335.avif"
-                    alt="Slide 3">
                 <div class="caption">
                     <h2>Let’s Build Together</h2>
                     <p>High-performance websites & apps that grow businesses</p>
@@ -220,7 +220,6 @@
             <h2>Explore proven IT solutions designed to accelerate your growth, efficiency, and digital
                 transformation journey.
             </h2>
-            <button class="proposal-btn">Get a Custom Proposal Now</button>
         </div>
         <div class="services-bottom">
             <div class="slider" id="slider">
@@ -229,12 +228,6 @@
                     <h3>Web Application Development</h3>
                     <p>Our new-age custom web applications deliver an unbeatable experience to your employees and
                         customers.</p>
-                </div>
-                <div class="service-card">
-
-                    <h3>App Development</h3>
-                    <p>Our high-performance mobile and web apps are engineered to streamline operations and elevate
-                        user engagement across every touchpoint.</p>
                 </div>
                 <div class="service-card">
 
@@ -254,32 +247,13 @@
                     <p>We craft intuitive, pixel-perfect interfaces that blend beauty with usability — turning casual
                         users into loyal fans.</p>
                 </div>
-                <div class="service-card">
-
-                    <h3>SOCIAL MEDIA HANDLER</h3>
-                    <p>Our strategic social media management builds your brand voice, sparks engagement, and keeps your
-                        digital community thriving.</p>
-                </div>
 
                 <div class="service-card">
 
-                    <h3>Admin Dashboard</h3>
+                    <h3>Admin Panel</h3>
                     <p>Our new-age custom web applications deliver an unbeatable experience to your employees and
                         customers.</p>
                 </div>
-                <div class="service-card">
-
-                    <h3>BACKEND DESIGNER</h3>
-                    <p>Our scalable backend solutions power your digital products with rock-solid architecture, seamless
-                        integrations, and blazing-fast performance</p>
-                </div>
-                <div class="service-card">
-
-                    <h3>APP MAINTAINENCE</h3>
-                    <p>We proactively maintain and optimize your applications to ensure they stay secure, up-to-date,
-                        and ready to perform(24/7)</p>
-                </div>
-
 
                 <div class="service-card">
 
@@ -304,7 +278,7 @@
     </div>
     <!-- Our Services End Here -->
 
-    <div class="section-work-container-main" id="#work">
+    <div class="section-work-container-main" id="work">
         <h1>why work with ithubservice ?</h1>
         <svg class="w-full " width="300px" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -391,26 +365,15 @@
 
             </div>
         </div>
-        <!-- <div class="team-btn">
-            <button type="submit" class="explore-button" onclick="redirect()">
-                Show All
-                <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z">
-                    </path>
-                </svg>
-            </button>
-        </div> -->
         <!-- why work with us  -->
 
         <!-- Contact Page -->
         <div class="get-in">
             <img class="arrow-icon-svg arrow-icon-svg-1" src="image/curved-arrow-green.png">
-            <img class="arrow-icon-svg arrow-icon-svg-2" src="image/curved-arrow-green.png">
-            <div class="contact-us" id="contact">
-                <form class="contact-left" action="https://formsubmit.co/solo95bgmi@gmail.com" method="POST">
-                    <div class="contact-left-title">
-                        <h2>Enquiry Now</h2>
+            <div class="contact-us">
+                <form class="contact-content" id="contact" action="https://formsubmit.co/solo95bgmi@gmail.com" method="POST">
+                    <div class="contact-content-title">
+                        <h2 class="contact-h2">Enquiry Now</h2>
                         <hr>
                     </div>
                     <input type="text" name="name" placeholder="Enter Name" class="contact-inputs" required>
@@ -424,7 +387,7 @@
                         Submit <span class="arrow-contact"><i class="fa-solid fa-arrow-right"></i></span>
                     </button>
             </div>
-            <div class="techno-main">
+            <div class="techno-main" id="technology">
                 <h1 class="techno-h1">Technologies we work with</h1>
 
                 <div class="tabs">
@@ -568,7 +531,7 @@
             <footer class="footer">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <span><img src="image/faviconlogo-ihs.png" alt="">ithubservice</span>
+                        <span><img src="image/ihs.svg" alt="">ithubservice</span>
                     </div>
                     <p class="footer-desc">
                         We customize and design our tech support services to fit your business just right—your goals,
@@ -584,12 +547,10 @@
                     <div class="footer-title">More Information</div>
                     <ul class="footer-links">
                         <li><a href="#">Home</a> </li>
-                        <li><a href="#team.html">team member page</a></li>
+                        <li><a href="team.html">team member page</a></li>
                         <li><a href="#services">services</a></li>
                         <li><a href="#contact">contact us</a></li>
-                        <li><a href="coming.html">Privacy Policy</a></li>
                         <li><a href="coming.html">Terms & Conditions</a></li>
-                        <li><a href="coming.html">cookies and policy</a></li>
                     </ul>
                 </div>
 

@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #00071a;
 }
 
 html {
@@ -16,15 +16,6 @@ body {
   /* background-color: rgb(0, 57, 200); */
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
-}
-
-.navbar {
-  /* background: linear-gradient(90deg, #000000, #4e0000); */
-  background-color: rgb(0, 57, 200);
-  color: white;
-  position: relative;
-  padding: 1rem 0;
-  border-bottom: 1px solid #fff;
 }
 
 .navbar-container {
@@ -46,6 +37,7 @@ body {
   width: 6rem;
   height: 6rem;
   background-size: cover;
+  cursor: pointer;
 }
 
 /* Desktop Navigation */
@@ -81,8 +73,6 @@ body {
 /* CTA Button */
 .cta-button {
   display: none;
-  background-color: #02081b;
-  /* background: rgba(0, 7, 26); */
   color: #fff;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -105,12 +95,6 @@ body {
   color: white;
   cursor: pointer;
   padding: 0.5rem;
-}
-
-.hamburger {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
 }
 
 /* Mobile Menu Overlay */
@@ -144,7 +128,9 @@ body {
 }
 
 .mobile-menu-header .logo-text {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f4f8fe;
 }
 
 .mobile-nav-list {
@@ -410,15 +396,6 @@ body {
   margin: 30px;
   font-weight: 700;
 }
-.proposal-btn {
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 70px;
-}
 .slider-bottom {
   overflow: hidden;
   width: 100%;
@@ -487,22 +464,26 @@ input {
 }
 input[type="text"] {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #00071a;
 }
 input[type="email"] {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #00071a;
 }
-.contact-left {
+.contact-content {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 20px;
+  background-color: #3b89ff;
+  padding: 2vw 1vw;
+  border-radius: 10px;
+  color: #00071a;
 }
-.contact-left-title h2 {
+.contact-content-title .contact-h2 {
   font-weight: 600;
-  color: #fff;
-  font-size: 40px;
+  color: #00071a;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 .contact-inputs {
@@ -518,40 +499,9 @@ input[type="email"] {
 .contact-textarea {
   height: 100px;
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #00071a;
   padding-top: 10px;
   padding-left: 20px;
-}
-/* top-brands-name */
-
-.trusted-brands-name .brand-name {
-  text-align: center;
-}
-.top-brands-bar-1 {
-  max-width: 900px;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  padding: 10px 10px;
-  align-items: center;
-  margin-bottom: 10px;
-  transform: skew(-25deg);
-}
-.top-brands-bar-1 .service-card-ott h3 {
-  width: 900px;
-}
-.top-brands-bar-1 .service-card-img-ott img {
-  height: 50px;
-  border-radius: 50%;
-}
-
-.top-brands-bar-2 {
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  padding: 10px 10px;
-  align-items: center;
-}
-.top-brands-bar-2 .service-card-shreeji h3 {
-  width: 900px;
 }
 /* Team Member Page */
 .team .team-members {
@@ -633,7 +583,7 @@ input[type="email"] {
 /* Button of Contact Page */
 .submit-button {
   background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: #00071a;
   font-size: 1.2rem;
   padding: 0.7vw 2vw;
   border: none;
@@ -648,6 +598,7 @@ input[type="email"] {
 
 .arrow-contact {
   display: inline-block;
+  color: #00071a;
   font-size: 1.3rem;
   transition: transform 0.3s ease;
 }
@@ -667,47 +618,13 @@ input[type="email"] {
     transform: translateX(5px) rotate(10deg);
   }
 }
+.submit-button:hover{
+  background-color: #0039c8;
+}
 .submit-button:hover .arrow-contact {
   animation: wiggle 1s infinite;
 }
 /* Code Ends */
-.explore-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 1vw 3vw;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  cursor: pointer;
-  overflow: hidden;
-  isolation: isolate;
-  transition: color 0.3s ease;
-  border: none;
-}
-
-.explore-button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -100%;
-  transform: translateY(-50%) scale(1);
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 9999px;
-  background-color: #fff;
-  z-index: -1;
-  transition: left 0.7s ease, transform 0.7s ease;
-}
-.explore-button:hover::before {
-  left: 0;
-  transform: translateY(-50%) scale(1.5);
-}
-.explore-button:hover {
-  color: #000000;
-}
 
 .arrow-icon {
   position: absolute;
@@ -728,22 +645,7 @@ input[type="email"] {
   transition: fill 0.3s ease;
 }
 
-.explore-button:hover .arrow-icon {
-  transform: rotate(90deg);
-  background-color: #f9fafb;
-  border: none;
-}
 
-.explore-button:hover .arrow-icon path {
-  fill: #1f2937;
-}
-.team-btn {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1vw 4vw;
-  border-radius: 5px;
-}
 /* why work with us  */
 .section-work-container-main {
   /* display: flex; */
@@ -777,6 +679,7 @@ input[type="email"] {
 .mid-circle-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 .mid-circle-container .circle-work-container {
@@ -875,12 +778,8 @@ input[type="email"] {
   font-weight: bold;
 }
 
-.tab:hover {
-  background-color: #ffd631;
-}
-
-.tab.active {
-  background-color: #ffd631;
+.tab.active, .tab:hover {
+  background-color: #0039c8;
   color: #fff;
 }
 
@@ -905,6 +804,7 @@ input[type="email"] {
   padding: 1.5vw 1.5vw 3.5vw 1.5vw;
   width: 9vw;
   height: 9vw;
+  color: #00071a;
 }
 
 .tech:hover {
@@ -943,12 +843,15 @@ input[type="email"] {
 }
 
 .footer-logo span img {
-  height: 50px;
+  height: 30px;
 }
 
 .footer-logo span {
   color: #00071a;
-  margin-right: 8px;
+    margin-right: 8px;
+    display: flex;
+    gap: 0.6vw;
+    align-items: center;
 }
 
 .footer-desc {

@@ -4,68 +4,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IT Services India - Team Page</title>
+    <link rel="shortcut icon" href="image/ihs.svg" type="image/logo.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="team.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
-    <div class="team-section">
-        <h1>CEO & Founder</h1>
-        <div class="box">
-            <div class="lbox">
-                <h1>Rahul kumar</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto qui provident deserunt minus
-                    omnis nihil dolores nemo nostrum nisi ut similique, ab obcaecati quas iste quis nulla laboriosam
-                    maiores molestias, aperiam aliquam ad veniam eaque fugit saepe? Rem, fugit, officiis nostrum quia
-                    commodi sed quo ab, iste consequatur totam voluptates!</p>
+    <!-- Navbar Start  -->
+     <nav class="navbar">
+        <div class="navbar-content">
+            <!-- Logo -->
+            <a href="index.html" class="main-logo">
+                <img src="image/ihs.svg" alt="IHS Logo" class="logo-icon">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="main-navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            HOME
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">
+                            SERVICES
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#work" class="nav-link">
+                            Work With Us
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#technology" class="nav-link">
+                            TECHNOLOGIES
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pricing.html" class="nav-link">
+                            PRICING
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">
+                            TEAM
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            ABOUT
+
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="rbox">
+
+            <!-- CTA Button -->
+            <div class="main-button">
+                <a class="cta-button open-popup-btn" onclick="openPopup()">Enquiry now<i
+                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg class="hamburger" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-icon"></div>
+            <span class="logo-text">IT SERVICES INDIA</span>
+        </div>
+        <ul class="mobile-nav-list">
+            <li>
+                <a href="#services" class="mobile-nav-link">
+                    SERVICES
+                    <svg class="dropdown-icon" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="mobile-nav-link">
+                    WORK WITH US
+                    <svg class="dropdown-icon" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="mobile-nav-link">
+                    TECHNOLOGIES
+                    <svg class="dropdown-icon" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="mobile-nav-link">
+                    PRICING
+                    <svg class="dropdown-icon" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="mobile-nav-link">
+                    TEAM
+                    <svg class="dropdown-icon" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="mobile-nav-link">
+                    ABOUT US
+                    <svg class="dropdown-icon" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <div class="mobile-cta">
+            <button class="cta-button open-popup-btn" onclick="openPopup()">LET'S TALKS<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        </div>
+    </div>
+    <!-- Popup for Enquir -->
+    <div class="popup-overlay" id="popup">
+    <div class="contact-container-new">
+        <h2 class="popup-h2">Enquiry Form</h2>
+        <form id="enquiryForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="email" placeholder="Email Address" required>
+
+            <div class="dropdown">
+                <div class="dropdown-btn" id="dropdownBtn">
+                    <span id="selectedOption">Select Series</span>
+                    <span class="arrow" id="arrow">&#9662;</span>
+                </div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div data-value="7 Series">7 Series</div>
+                    <div data-value="14 Series">14 Series</div>
+                    <div data-value="15 Series">15 Series</div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Enquiry</button>
+        </form>
+        <!-- Success Message -->
+        <div id="successMsg" style="display:none; text-align:center; padding:20px;">
+      <h2 style="color: #2563eb;">Enquiry submitted successfully!</h2>
+      <h2 style="color:#2563eb;">Our Team Contact You Soon...</h2>
+    </div>
+    </div>
+  </div>
+  <!-- Popup Ends -->
+     <!-- Navar Ends -->
+    <div id="main">
+        <div id="left">
+            <h1>Our Team</h1>
+        </div>
+        <div id="right">
+            <div class="limg">
                 <img src="image/rahul.jpg" alt="">
+                <h3>Rahul Kumar</h3>
+                <p>CEO</p>
             </div>
-        </div>
-
-        <h1>CTO</h1>
-        <div class="box">
-            <div class="lbox">
-                <h1>PIYUSH</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi soluta voluptates unde culpa
-                    perferendis totam odit excepturi dolor provident veritatis? Veritatis doloremque dolorum laboriosam,
-                    maiores hic quas explicabo voluptas aliquam molestiae fuga cupiditate quisquam accusantium
-                    temporibus, ipsam nisi excepturi dolore error expedita officia dolorem placeat facilis aperiam.
-                    Modi, repellendus atque!</p>
+            <div class="rimg">
+                <img src="image/ps.jpeg" alt="">
+                <h3>Piyush Singh</h3>
+                <p>CTO</p>
             </div>
-            <div class="rbox">
-                <img src="" alt="">
+            <div class="limg">
+                <img src="image/sachin sir.png" alt="">
+                <h3>Sachin Singh</h3>
+                <p>CRM</p>
             </div>
-        </div>
-
-        <h1>CEO & Founder</h1>
-        <div class="box">
-            <div class="lbox">
-                <p></p>
+            <div class="rimg">
+                <img src="image/user.png" alt="">
+                <h3>Ronak</h3>
+                <p>Manager</p>
             </div>
-            <div class="rbox">
-                <img src="" alt="">
+            <div class="limg">
+                <img src="image/user.png" alt="">
+                <h3>Sachin Kumar</h3>
+                <p>Web Developer</p>
             </div>
-        </div>
-
-        <h1>CEO & Founder</h1>
-        <div class="box">
-            <div class="lbox"></div>
-            <div class="rbox"></div>
-        </div>
-
-        <h1>CEO & Founder</h1>
-        <div class="box">
-            <div class="lbox"></div>
-            <div class="rbox"></div>
+            <div class="rimg">
+                <img src="image/user.png" alt="">
+                <h3>Prince Kumar</h3>
+                <p>Web Developer</p>
+            </div>
         </div>
     </div>
-    </div>
-    </section>
+    
 
-    <script src="script.js"></script>
+    <!-- footer -->
+            <footer class="footer">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span><img src="image/faviconlogo-ihs.png" alt="">ithubservice</span>
+                    </div>
+                    <p class="footer-desc">
+                        We customize and design our tech support services to fit your business just right—your goals,
+                        your structure, your way.
+                    </p>
+                    <div class="footer-icons">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-title">More Information</div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a> </li>
+                        <li><a href="#">team member page</a></li>
+                        <li><a href="index.html">services</a></li>
+                        <li><a href="index.html">contact us</a></li>
+                        <li><a href="coming.html">Privacy Policy</a></li>
+                        <li><a href="coming.html">Terms & Conditions</a></li>
+                        <li><a href="coming.html">cookies and policy</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-column">
+                    <div class="footer-title">Contact Info</div>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            1 800 234 5678
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="#">rahul0306kr@gmail.com</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </footer>
+
+        <script>
+    function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("successMsg").style.display = "none";
+    document.getElementById("enquiryForm").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Close popup if clicked outside the box
+  window.addEventListener("click", function (e) {
+    const popup = document.getElementById("popup");
+    if (e.target === popup) {
+      closePopup();
+    }
+  });
+
+  const dropdownBtn = document.getElementById('dropdownBtn');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const selectedOption = document.getElementById('selectedOption');
+  const arrow = document.getElementById('arrow');
+
+  dropdownBtn.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('active');
+    arrow.classList.toggle('rotate');
+  });
+
+  dropdownMenu.querySelectorAll('div').forEach(option => {
+    option.addEventListener('click', () => {
+      selectedOption.textContent = option.getAttribute('data-value');
+      dropdownMenu.classList.remove('active');
+      arrow.classList.remove('rotate');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove('active');
+      arrow.classList.remove('rotate');
+    }
+  });
+
+  // Handle form submission
+  document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Show success message and hide form
+    this.style.display = "none";
+    document.getElementById("successMsg").style.display = "block";
+
+    // Auto-close after 3 seconds
+    setTimeout(() => {
+      closePopup();
+    }, 3000);
+  });
+  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
