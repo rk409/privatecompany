@@ -17,9 +17,8 @@
 <body>
     <!-- chatbot starts here -->
     <div id="chat-icon" onclick="toggleChat()">
-        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Sachin Assistant" />
+        <img src="image/chat.png" alt="Sachin Assistant" />
     </div>
-
     <div id="chat-widget">
         <div id="chat-header" onclick="toggleChat()">Sachin 💬 – Click to Minimize</div>
         <div id="chat-body">
@@ -177,34 +176,72 @@
     </div>
     <!-- hero-section -->
     <div class="carousel-container">
-        <div class="carousel-slide" id="slide-track">
-            <div class="carousel-item">
-                <div class="caption">
-                    <h2>Welcome to Our Website</h2>
-                    <p>Delivering modern solutions with creative vibes</p>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide active" data-gradient="gradient-1">
+                    <div class="slide-content">
+                        <h2>Welcome to Our Platform</h2>
+                        <p>Discover amazing features and experiences tailored just for you.</p>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide" data-gradient="gradient-2">
+                    <div class="slide-content">
+                        <h2>Innovation at Its Best</h2>
+                        <p>Experience cutting-edge technology that transforms the way you work.</p>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide" data-gradient="gradient-3">
+                    <div class="slide-content">
+                        <h2>Join Our Community</h2>
+                        <p>Connect with like-minded individuals and grow together.</p>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide" data-gradient="gradient-4">
+                    <div class="slide-content">
+                        <h2>Your Success Matters</h2>
+                        <p>We're here to support your journey every step of the way.</p>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide" data-gradient="gradient-5">
+                    <div class="slide-content">
+                        <h2>Start Your Journey</h2>
+                        <p>Take the first step towards something extraordinary today.</p>
+                    </div>
+                    <div class="slide-overlay"></div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="caption">
-                    <h2>Fast, Simple, Elegant</h2>
-                    <p>UI/UX and Web Design services for your brand</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="caption">
-                    <h2>Let’s Build Together</h2>
-                    <p>High-performance websites & apps that grow businesses</p>
-                </div>
-            </div>
-        </div>
 
-        <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+            <!-- Navigation Arrows -->
+            <button class="nav-arrow prev-arrow" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                </svg>
+            </button>
+            <button class="nav-arrow next-arrow" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+            </button>
 
-        <div class="dots" id="dot-container">
-            <span class="dot active" onclick="gotoSlide(0)"></span>
-            <span class="dot" onclick="gotoSlide(1)"></span>
-            <span class="dot" onclick="gotoSlide(2)"></span>
+            <!-- Slide Indicators -->
+            <div class="indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
+                <button class="indicator" data-slide="3"></button>
+                <button class="indicator" data-slide="4"></button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
         </div>
     </div>
     <!-- Our Services -->
@@ -371,7 +408,8 @@
         <div class="get-in">
             <img class="arrow-icon-svg arrow-icon-svg-1" src="image/curved-arrow-green.png">
             <div class="contact-us">
-                <form class="contact-content" id="contact" action="https://formsubmit.co/solo95bgmi@gmail.com" method="POST">
+                <form class="contact-content" id="contact" action="https://formsubmit.co/solo95bgmi@gmail.com"
+                    method="POST">
                     <div class="contact-content-title">
                         <h2 class="contact-h2">Enquiry Now</h2>
                         <hr>
@@ -539,7 +577,8 @@
                     </p>
                     <div class="footer-icons">
                         <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/company/ithubservice" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
                         <i class="fa-brands fa-x-twitter"></i>
                     </div>
                 </div>
@@ -560,11 +599,11 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            8920866770
+                            9911468082
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="#">rahul0306kr@gmail.com</a>
+                            <a href="#">support@ithubservice.in</a>
                         </li>
 
                     </ul>

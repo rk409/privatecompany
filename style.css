@@ -230,157 +230,167 @@ body {
   background-color: rgb(0, 57, 200);
 }
 /* Animation Ends */
-
 .carousel-container {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
-  height: 500px;
-  margin: 60px auto;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0, 57, 200, 0.5);
-}
-
-.carousel-slide {
+  margin-bottom: 3rem;
   display: flex;
-  width: 300%;
-  height: 100%;
-  animation: slide 15s infinite ease-in-out;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.carousel-item {
-  width: 100%;
-  flex-shrink: 0;
-  height: 100%;
+.carousel {
   position: relative;
-  transition: transform 1s ease;
+  width: 90%;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-.carousel-item img {
-  width: 100%;
+.slides {
+  display: flex;
+  width: 500%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7);
+  transition: transform 0.5s ease-in-out;
 }
 
-.caption {
-  position: absolute;
-  bottom: 50px;
-  left: 60px;
+.slide {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  flex-shrink: 0;
+}
+
+.gradient-1 {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+.gradient-2 {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.gradient-3 {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+}
+
+.gradient-4 {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+}
+
+.gradient-5 {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+}
+
+.slide-content {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  z-index: 2;
+  position: relative;
+}
+
+.slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
   color: #fff;
-  animation: fadeIn 2s ease-in-out forwards;
 }
 
-.caption h2 {
-  font-size: 38px;
-  margin-bottom: 10px;
-  text-shadow: 0 0 20px #0039c8;
+.slide-content p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  color: #fff;
 }
 
-.caption p {
-  font-size: 18px;
-  opacity: 0.85;
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-.nav-btn {
+.nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2);
   border: none;
-  color: white;
-  font-size: 28px;
-  padding: 12px;
-  cursor: pointer;
-  z-index: 2;
   border-radius: 50%;
-  transition: 0.3s;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  z-index: 10;
 }
 
-.nav-btn:hover {
-  background: #0039c8;
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.prev {
-  left: 15px;
+.prev-arrow {
+  left: 1.5rem;
 }
 
-.next {
-  right: 15px;
+.next-arrow {
+  right: 1.5rem;
 }
 
-.dots {
+.indicators {
   position: absolute;
-  bottom: 20px;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 0.5rem;
+  z-index: 10;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background: #bbb;
+.indicator {
+  width: 16px;
+  height: 20px;
   border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.2s ease;
 }
 
-.dot.active {
-  background: #0039c8;
-  box-shadow: 0 0 8px #0039c8;
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.75);
 }
 
-@keyframes slide {
-  0%,
-  20% {
-    transform: translateX(0);
-  }
-
-  25%,
-  45% {
-    transform: translateX(-100%);
-  }
-
-  50%,
-  70% {
-    transform: translateX(-200%);
-  }
-
-  75%,
-  100% {
-    transform: translateX(0);
-  }
+.indicator.active {
+  background: white;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
 }
 
-@media (max-width: 768px) {
-  .caption h2 {
-    font-size: 26px;
-  }
-
-  .caption p {
-    font-size: 14px;
-  }
-
-  .carousel-container {
-    height: 320px;
-  }
+.progress-fill {
+  height: 100%;
+  background: white;
+  transition: width 0.3s ease-linear;
+  width: 20%;
 }
-
 /* Services Code start here */
 .services {
   padding: 2rem;
@@ -475,7 +485,8 @@ input[type="email"] {
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  background-color: #3b89ff;
+  border: 1px solid #00071a;
+  /* background-color: #3b89ff; */
   padding: 2vw 1vw;
   border-radius: 10px;
   color: #00071a;
@@ -489,7 +500,7 @@ input[type="email"] {
 .contact-inputs {
   width: 400px;
   height: 50px;
-  border: none;
+  /* border: none; */
   outline: none;
   padding-left: 25px;
   font-weight: 500;
@@ -618,7 +629,7 @@ input[type="email"] {
     transform: translateX(5px) rotate(10deg);
   }
 }
-.submit-button:hover{
+.submit-button:hover {
   background-color: #0039c8;
 }
 .submit-button:hover .arrow-contact {
@@ -644,7 +655,6 @@ input[type="email"] {
   fill: #1f2937; /* gray-800 */
   transition: fill 0.3s ease;
 }
-
 
 /* why work with us  */
 .section-work-container-main {
@@ -778,7 +788,8 @@ input[type="email"] {
   font-weight: bold;
 }
 
-.tab.active, .tab:hover {
+.tab.active,
+.tab:hover {
   background-color: #0039c8;
   color: #fff;
 }
@@ -848,10 +859,10 @@ input[type="email"] {
 
 .footer-logo span {
   color: #00071a;
-    margin-right: 8px;
-    display: flex;
-    gap: 0.6vw;
-    align-items: center;
+  margin-right: 8px;
+  display: flex;
+  gap: 0.6vw;
+  align-items: center;
 }
 
 .footer-desc {

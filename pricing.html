@@ -2,24 +2,25 @@
 <html lang="en">
 
 <head>
+
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>IT Services India - Plans</title>
-    <link rel="shortcut icon" href="image/ihs.svg" type="image/logo.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="chatbot.css">
-    <link rel="stylesheet" href="pricing.css">
-    <link rel="stylesheet" href="popup.css">
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>IT Services India - Plans</title>
+        <link rel="shortcut icon" href="image/ihs.svg" type="image/logo.">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="chatbot.css">
+        <link rel="stylesheet" href="pricing.css">
+        <link rel="stylesheet" href="popup.css">
+    </head>
 
 <body>
     <!-- Navbar -->
-     <nav class="navbar">
+    <nav class="navbar">
         <div class="navbar-content">
             <!-- Logo -->
             <a href="index.html" class="main-logo">
@@ -161,7 +162,7 @@
             <a href="#contact" class="cta-button">LET'S TALKS<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
     </div>
-     <!-- Navbar End -->
+    <!-- Navbar End -->
 
     <h1 class="ptitle">Our Pricing Plans</h1>
 
@@ -247,141 +248,142 @@
     <div class="spacing"></div>
 
     <!-- Custom Popup -->
-  <div class="popup-overlay" id="popup">
-    <div class="contact-container-new">
-        <h2 class="popup-h2">Enquiry Form</h2>
-        <form id="enquiryForm">
-            <input type="text" placeholder="Full Name" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="email" placeholder="Email Address" required>
+    <div class="popup-overlay" id="popup">
+        <div class="contact-container-new">
+            <h2 class="popup-h2">Enquiry Form</h2>
+            <form id="enquiryForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <input type="email" placeholder="Email Address" required>
 
-            <div class="dropdown">
-                <div class="dropdown-btn" id="dropdownBtn">
-                    <span id="selectedOption">Select Series</span>
-                    <span class="arrow" id="arrow">&#9662;</span>
+                <div class="dropdown">
+                    <div class="dropdown-btn" id="dropdownBtn">
+                        <span id="selectedOption">Select Series</span>
+                        <span class="arrow" id="arrow">&#9662;</span>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <div data-value="7 Series">7 Series</div>
+                        <div data-value="14 Series">14 Series</div>
+                        <div data-value="15 Series">15 Series</div>
+                    </div>
                 </div>
-                <div class="dropdown-menu" id="dropdownMenu">
-                    <div data-value="7 Series">7 Series</div>
-                    <div data-value="14 Series">14 Series</div>
-                    <div data-value="15 Series">15 Series</div>
-                </div>
+
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+            </form>
+            <!-- Success Message -->
+            <div id="successMsg" style="display:none; text-align:center; padding:20px;">
+                <h2 style="color: #2563eb;">Enquiry submitted successfully!</h2>
+                <h2 style="color:#2563eb;">Our Team Contact You Soon...</h2>
             </div>
-
-            <button type="submit" class="submit-btn">Submit Enquiry</button>
-        </form>
-        <!-- Success Message -->
-        <div id="successMsg" style="display:none; text-align:center; padding:20px;">
-      <h2 style="color: #2563eb;">Enquiry submitted successfully!</h2>
-      <h2 style="color:#2563eb;">Our Team Contact You Soon...</h2>
+        </div>
     </div>
-    </div>
-  </div>
-<!-- Popup End -->
+    <!-- Popup End -->
 
     <!-- Footer -->
-     <footer class="footer">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <span><img src="image/ihs.svg" alt="">ithubservice</span>
-                    </div>
-                    <p class="footer-desc">
-                        We customize and design our tech support services to fit your business just right—your goals,
-                        your structure, your way.
-                    </p>
-                    <div class="footer-icons">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <div class="footer-title">More Information</div>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a> </li>
-                        <li><a href="team.html">team member page</a></li>
-                        <li><a href="index.html">services</a></li>
-                        <li><a href="index.html">contact us</a></li>
-                        <li><a href="coming.html">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+    <footer class="footer">
+        <div class="footer-column">
+            <div class="footer-logo">
+                <span><img src="image/ihs.svg" alt="">ithubservice</span>
+            </div>
+            <p class="footer-desc">
+                We customize and design our tech support services to fit your business just right—your goals,
+                your structure, your way.
+            </p>
+            <div class="footer-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.linkedin.com/company/ithubservice" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+        <div class="footer-column">
+            <div class="footer-title">More Information</div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="team.html">team member page</a></li>
+                <li><a href="index.html">services</a></li>
+                <li><a href="index.html">contact us</a></li>
+                <li><a href="coming.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
 
 
-                <div class="footer-column">
-                    <div class="footer-title">Contact Info</div>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            1 800 234 5678
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="#">rahul0306kr@gmail.com</a>
-                        </li>
+        <div class="footer-column">
+            <div class="footer-title">Contact Info</div>
+            <ul class="footer-contact">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    9911468082
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#">support@ithubservice.in</a>
+                </li>
 
-                    </ul>
-                </div>
+            </ul>
+        </div>
 
-            </footer>
-     <!-- Footer End -->
-      <script>
-    function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-    document.getElementById("successMsg").style.display = "none";
-    document.getElementById("enquiryForm").style.display = "block";
-  }
+    </footer>
+    <!-- Footer End -->
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+            document.getElementById("successMsg").style.display = "none";
+            document.getElementById("enquiryForm").style.display = "block";
+        }
 
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-  }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
 
-  // Close popup if clicked outside the box
-  window.addEventListener("click", function (e) {
-    const popup = document.getElementById("popup");
-    if (e.target === popup) {
-      closePopup();
-    }
-  });
+        // Close popup if clicked outside the box
+        window.addEventListener("click", function (e) {
+            const popup = document.getElementById("popup");
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
 
-  const dropdownBtn = document.getElementById('dropdownBtn');
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  const selectedOption = document.getElementById('selectedOption');
-  const arrow = document.getElementById('arrow');
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const selectedOption = document.getElementById('selectedOption');
+        const arrow = document.getElementById('arrow');
 
-  dropdownBtn.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('active');
-    arrow.classList.toggle('rotate');
-  });
+        dropdownBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+            arrow.classList.toggle('rotate');
+        });
 
-  dropdownMenu.querySelectorAll('div').forEach(option => {
-    option.addEventListener('click', () => {
-      selectedOption.textContent = option.getAttribute('data-value');
-      dropdownMenu.classList.remove('active');
-      arrow.classList.remove('rotate');
-    });
-  });
+        dropdownMenu.querySelectorAll('div').forEach(option => {
+            option.addEventListener('click', () => {
+                selectedOption.textContent = option.getAttribute('data-value');
+                dropdownMenu.classList.remove('active');
+                arrow.classList.remove('rotate');
+            });
+        });
 
-  document.addEventListener('click', (e) => {
-    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-      dropdownMenu.classList.remove('active');
-      arrow.classList.remove('rotate');
-    }
-  });
+        document.addEventListener('click', (e) => {
+            if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('active');
+                arrow.classList.remove('rotate');
+            }
+        });
 
-  // Handle form submission
-  document.getElementById("enquiryForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+        // Handle form submission
+        document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-    // Show success message and hide form
-    this.style.display = "none";
-    document.getElementById("successMsg").style.display = "block";
+            // Show success message and hide form
+            this.style.display = "none";
+            document.getElementById("successMsg").style.display = "block";
 
-    // Auto-close after 3 seconds
-    setTimeout(() => {
-      closePopup();
-    }, 3000);
-  });
-  </script>
-  <script src="script.js"></script>
+            // Auto-close after 3 seconds
+            setTimeout(() => {
+                closePopup();
+            }, 3000);
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
