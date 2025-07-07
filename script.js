@@ -250,16 +250,16 @@ container.addEventListener(
 
 // chatbot start here
 const faqs = {
-  coursesz:
-    "We offer Web Development, Graphic Design, Tally, MS Office, and more. Visit the Courses page for full details.",
-  timings:
-    "Our classes run from 7 AM to 8 PM in various batches. You can choose a convenient slot.",
-  fees: "Fees vary by course. Contact us for details or visit the 'Courses' section.",
-  admission:
-    "You can enroll online or visit our office with 2 passport-sized photos and a valid ID.",
-  location: "We are located at [Your Address Here].",
-  name: "My name is Sachin. What can i help you?",
-  doing: "I can help you to explore courses",
+  services:
+"Web Application- Logo Design- Fullstack Design- UI & UX Development- Admin Panel- Website Maintenance- Admin Dashboard- Chatbot Creation",
+contact:
+`support@ithubservice.in\n
+9911468082`,
+refund: "yes",
+designs:
+"modern, minimal , premium",
+ssl: "yes.",
+  name: "My name is IHS. What can i help you?",
 };
 
 function toggleChat() {
@@ -275,7 +275,7 @@ function sendMessage() {
 
   log.innerHTML += `<div><strong>You:</strong> ${msg}</div>`;
   let response =
-    "I'm not sure about that. Please contact our team for more info.";
+    "I'm not sure about that. Please contact our team for more info. Enter contact for contact info!";
 
   for (const keyword in faqs) {
     if (msg.toLowerCase().includes(keyword)) {
@@ -285,7 +285,7 @@ function sendMessage() {
   }
 
   setTimeout(() => {
-    log.innerHTML += `<div><strong>Sachin:</strong> ${response}</div>`;
+    log.innerHTML += `<div><strong>IHS:</strong> ${response}</div>`;
     log.scrollTop = log.scrollHeight;
   }, 500);
 

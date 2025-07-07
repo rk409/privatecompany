@@ -63,12 +63,6 @@
 
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            ABOUT
-
-                        </a>
-                    </li>
                 </ul>
             </div>
 
@@ -146,16 +140,6 @@
                     </svg>
                 </a>
             </li>
-            <li>
-                <a href="#" class="mobile-nav-link">
-                    ABOUT US
-                    <svg class="dropdown-icon" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </li>
         </ul>
         <div class="mobile-cta">
             <button class="cta-button open-popup-btn" onclick="openPopup()">LET'S TALKS<i
@@ -166,10 +150,11 @@
     <div class="popup-overlay" id="popup">
         <div class="contact-container-new">
             <h2 class="popup-h2">Enquiry Form</h2>
-            <form id="enquiryForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email Address" required>
+            <form id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="860c01ec-2427-4e94-8fdf-0e0a0084f0d1">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="email" name="email" placeholder="Email Address" required>
 
                 <div class="dropdown">
                     <div class="dropdown-btn" id="dropdownBtn">
@@ -177,9 +162,9 @@
                         <span class="arrow" id="arrow">&#9662;</span>
                     </div>
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <div data-value="7 Series">7 Series</div>
-                        <div data-value="14 Series">14 Series</div>
-                        <div data-value="15 Series">15 Series</div>
+                        <div name="7series" data-value="7 Series">7 Series</div>
+                        <div name="14series" data-value="14 Series">14 Series</div>
+                        <div name="15series" data-value="15 Series">15 Series</div>
                     </div>
                 </div>
 
@@ -215,7 +200,7 @@
                 <p>CRM</p>
             </div>
             <div class="rimg">
-                <img src="image/user.png" alt="">
+                <img src="image/ronak.jpg" alt="">
                 <h3>Ronak</h3>
                 <p>Manager</p>
             </div>
@@ -244,10 +229,11 @@
                 your structure, your way.
             </p>
             <div class="footer-icons">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-x-twitter"></i>
-            </div>
+                        <a href="http://instagram.com/ithubservice.in" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/ithubservice" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
         </div>
         <div class="footer-column">
             <div class="footer-title">More Information</div>
@@ -268,11 +254,11 @@
             <ul class="footer-contact">
                 <li>
                     <i class="fa-solid fa-phone"></i>
-                    9911468082
+                    <a href="tel:9911468082">9911468082</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-envelope"></i>
-                    <a href="#">support@ithubservice.in</a>
+                    <a href="mailto:support@ithubservice.in">support@ithubservice.in</a>
                 </li>
 
             </ul>

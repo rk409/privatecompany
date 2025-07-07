@@ -65,12 +65,6 @@
 
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            ABOUT
-
-                        </a>
-                    </li>
                 </ul>
             </div>
 
@@ -147,16 +141,6 @@
                     </svg>
                 </a>
             </li>
-            <li>
-                <a href="#" class="mobile-nav-link">
-                    ABOUT US
-                    <svg class="dropdown-icon" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </li>
         </ul>
         <div class="mobile-cta" id="contact">
             <a href="#contact" class="cta-button">LET'S TALKS<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -176,7 +160,6 @@
                 <li class="service-provide">responsive mobile + desktop</li>
                 <li class="service-provide">Free Domain</li>
                 <li>dynamic content managment</li>
-
                 <li>email/sms notification</li>
                 <li class="service-provide">Basic animation / transitiion</li>
                 <li class="service-provide">professional layout</li>
@@ -189,6 +172,8 @@
                 <li>seo marketting</li>
                 <li class="service-provide">SSL certificate</li>
                 <li class="service-provide">free customization (7 days)</li>
+                <li class="service-provide">Free Website Maintainence</li>
+
             </ul>
             <button class="open-popup-btn" onclick="openPopup()">Choose Plan</button>
         </div>
@@ -214,6 +199,7 @@
                 <li>seo marketting</li>
                 <li class="service-provide">SSL certificate</li>
                 <li class="service-provide">free customization (7 days)</li>
+                <li class="service-provide">Free Website Maintainence</li>
             </ul>
             <button class="open-popup-btn" onclick="openPopup()">Choose Plan</button>
         </div>
@@ -239,6 +225,7 @@
                 <li class="service-provide">seo marketting</li>
                 <li class="service-provide">SSL certificate</li>
                 <li class="service-provide">free customization (14 days)</li>
+                <li class="service-provide">Free Website Maintainence</li>
                 <!-- You can add more features here -->
             </ul>
             <button class="open-popup-btn" onclick="openPopup()">Choose Plan</button>
@@ -251,7 +238,8 @@
     <div class="popup-overlay" id="popup">
         <div class="contact-container-new">
             <h2 class="popup-h2">Enquiry Form</h2>
-            <form id="enquiryForm">
+            <form id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="860c01ec-2427-4e94-8fdf-0e0a0084f0d1">
                 <input type="text" placeholder="Full Name" required>
                 <input type="tel" placeholder="Phone Number" required>
                 <input type="email" placeholder="Email Address" required>
@@ -290,11 +278,11 @@
                 your structure, your way.
             </p>
             <div class="footer-icons">
-                <i class="fa-brands fa-instagram"></i>
-                <a href="https://www.linkedin.com/company/ithubservice" target="_blank"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <i class="fa-brands fa-x-twitter"></i>
-            </div>
+                        <a href="http://instagram.com/ithubservice.in" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/ithubservice" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
         </div>
         <div class="footer-column">
             <div class="footer-title">More Information</div>
@@ -313,11 +301,11 @@
             <ul class="footer-contact">
                 <li>
                     <i class="fa-solid fa-phone"></i>
-                    9911468082
+                    <a href="tel:9911468082">9911468082</a>
                 </li>
                 <li>
                     <i class="fa-solid fa-envelope"></i>
-                    <a href="#">support@ithubservice.in</a>
+                    <a href="mailto:support@ithubservice.in">support@ithubservice.in</a>
                 </li>
 
             </ul>

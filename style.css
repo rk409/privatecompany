@@ -469,17 +469,24 @@ body {
   right: 20%;
   rotate: 180deg;
 }
-input {
-  border-radius: 5px;
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  padding-left: 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  color: black;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-input[type="text"] {
-  background: rgba(255, 255, 255, 0.1);
-  color: #00071a;
+input:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
 }
-input[type="email"] {
-  background: rgba(255, 255, 255, 0.1);
-  color: #00071a;
-}
+
+
 .contact-content {
   display: flex;
   flex-direction: column;
@@ -504,7 +511,7 @@ input[type="email"] {
   outline: none;
   padding-left: 25px;
   font-weight: 500;
-  color: #fff;
+  color: #00071a;
   border-radius: 5px;
 }
 .contact-textarea {
@@ -597,7 +604,7 @@ input[type="email"] {
   color: #00071a;
   font-size: 1.2rem;
   padding: 0.7vw 2vw;
-  border: none;
+  border: 2px solid #007bff;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -609,11 +616,9 @@ input[type="email"] {
 
 .arrow-contact {
   display: inline-block;
-  color: #00071a;
   font-size: 1.3rem;
   transition: transform 0.3s ease;
 }
-
 @keyframes wiggle {
   0%,
   100% {
@@ -631,8 +636,10 @@ input[type="email"] {
 }
 .submit-button:hover {
   background-color: #0039c8;
+  color: #fff;
 }
 .submit-button:hover .arrow-contact {
+  filter: invert(1);
   animation: wiggle 1s infinite;
 }
 /* Code Ends */
