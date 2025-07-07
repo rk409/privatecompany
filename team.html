@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>IthubService - Team Page</title>
+    <title>IT Services India - Team Page</title>
     <link rel="shortcut icon" href="image/ihs.svg" type="image/logo.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
@@ -170,11 +170,7 @@
 
                 <button type="submit" class="submit-btn">Submit Enquiry</button>
             </form>
-            <!-- Success Message -->
-            <div id="successMsg" style="display:none; text-align:center; padding:20px;">
-                <h2 style="color: #2563eb;">Enquiry submitted successfully!</h2>
-                <h2 style="color:#2563eb;">Our Team Contact You Soon...</h2>
-            </div>
+            
         </div>
     </div>
     <!-- Popup Ends -->
@@ -269,7 +265,6 @@
     <script>
         function openPopup() {
             document.getElementById("popup").style.display = "flex";
-            document.getElementById("successMsg").style.display = "none";
             document.getElementById("enquiryForm").style.display = "block";
         }
 
@@ -308,20 +303,6 @@
                 dropdownMenu.classList.remove('active');
                 arrow.classList.remove('rotate');
             }
-        });
-
-        // Handle form submission
-        document.getElementById("enquiryForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            // Show success message and hide form
-            this.style.display = "none";
-            document.getElementById("successMsg").style.display = "block";
-
-            // Auto-close after 3 seconds
-            setTimeout(() => {
-                closePopup();
-            }, 3000);
         });
     </script>
     <script src="script.js"></script>
